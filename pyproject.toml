@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "tracking_model"
+version = "1.0"
+description = "Perform cell lineage tracking."
+authors = ["Eleni Adam <eadam002@odu.edu>"]
+readme = "README.md"
+homepage = "https://github.com/eleniadam/tracking_model"
+repository = "https://github.com/eleniadam/tracking_model"
+license = "GNU General Public License v3"
+keywords= ["lineage","tracking"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+click = "^8.0.1"
+csbdeep = "^0.6.2"
+opencv-python = "^4.5.4.58"
+tifffile = "^2021.10.4"
+scikit-image = "^0.18.3"
+pandas = "^1.3.3"
+h5py = "^3.4.0"
+pyklb = { git = "https://github.com/bhoeckendorf/pyklb.git", rev = "skbuild" }
+importlib-metadata = {version = "^4.8.2", python = "<3.8"}
+networkx = "^2.6.3"
+tensorflow = "^2.8.1"
+
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+gdown = "^4.0.2"
+
+[tool.poetry.scripts]
+track_cell = "tracking_model.__main__:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+
+[tool.poetry.metadata]
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: POSIX :: Linux",
+]
