@@ -1,4 +1,4 @@
-# tracking_model: Track cells across timestamped 3D images
+# tracking_model: Instant registration and tracking of segmented microscopy images
 
 ## Installation 
 
