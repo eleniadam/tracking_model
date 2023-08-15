@@ -24,7 +24,7 @@ pip install git+https://github.com/eleniadam/tracking_model.git
 track_cell --help
 ```
 
-#### Example
+## Example
 
 1. Crop the 3D images using roi_convertor
 
